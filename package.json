@@ -4,9 +4,10 @@
   "description": "Repository for the Advent of Code 2025 code.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "prestart": "npm run build",
+    "build": "tsc && node scripts/copy-assets.js",
     "dev": "tsx src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "@types/node": "^26.1.1",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }
