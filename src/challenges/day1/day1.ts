@@ -1,7 +1,10 @@
 import * as fs from "fs";
 import * as path from "path";
 
-// This function calculates the number of times the position reaches 0 after moving left or right based on the input lines. Each line contains a direction ('L' or 'R') and a number of steps. The position is tracked modulo 100.
+// This function calculates the number of times the position reaches 0 
+// after moving left or right based on the input lines. Each line contains
+// a direction ('L' or 'R') and a number of steps. The position is tracked
+// modulo 100.
 export function part1(lines: string[]): number {
   let count = 0;
 
@@ -21,7 +24,10 @@ export function part1(lines: string[]): number {
   return count;
 }
 
-// This function calculates the number of times the position crosses the 0 boundary when moving left or right based on the input lines. Each line contains a direction ('L' or 'R') and a number of steps. The position is tracked modulo 100, and large movements are counted appropriately.
+// This function calculates the number of times the position crosses the 0
+// boundary when moving left or right based on the input lines. Each line
+// contains a direction ('L' or 'R') and a number of steps. The position is
+// tracked modulo 100, and large movements are counted appropriately.
 export function part2(lines: string[]): number {
   let count = 0;
 
