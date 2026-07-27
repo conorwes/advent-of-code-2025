@@ -57,7 +57,7 @@ export function run(): void {
   const input = fs.readFileSync(inputPath, "utf-8").trim();
 
   // Parse input
-  const lines = input.split("\n");
+  const lines = input.split(/\n/).filter(Boolean);
 
   // Part 1
   const result1 = part1(lines);
